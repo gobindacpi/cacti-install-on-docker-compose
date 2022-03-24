@@ -94,9 +94,9 @@ Docker-compose up -d
 
 docker logs cacti
 ~~~
-Then check browser with IP , UserName is admin and Password Admin
+If facing slow loading/performance Then check browser with IP , UserName is admin and Password Admin
 ~~~
-
+~~~
 Best Mysql Tunning for belows
 ~~~
 vim /etc/mysql/my.cnf file
