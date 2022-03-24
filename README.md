@@ -96,3 +96,33 @@ docker logs cacti
 ~~~
 Then check browser with IP , UserName is admin and Password Admin
 ~~~
+
+Best Mysql Tunning for belows
+~~~
+vim /etc/mysql/my.cnf file
+
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+log-error=/var/log/mariadb/mariadb.log
+pid-file=/run/mariadb/mariadb.pid
+collation-server=utf8mb4_unicode_ci
+character-set-server=utf8mb4
+max_heap_table_size=2048M
+tmp_table_size=2048M
+join_buffer_size=2048M
+# 25% Of Total System Memory
+innodb_buffer_pool_size=6GB
+# pool_size/128 for less than 1GB of memory
+innodb_buffer_pool_instances=18
+innodb_flush_log_at_timeout=3
+innodb_read_io_threads=2048
+innodb_write_io_threads=2048
+innodb_io_capacity=50000
+innodb_file_format=Barracuda
+innodb_large_prefix=1
+innodb_io_capacity_max=100000
+
+
+~~~
+
